@@ -1,0 +1,11 @@
+n1 = input("Digite uma frase: ")
+palavra_antiga = input("Digite a palavra que você quer substituir: ")
+palavra_subs = input("Por qual palavra?")
+lista_palavras = []
+lista_palavras = n1.split(" ")
+
+for i in range(len(lista_palavras)):
+    if lista_palavras[i] == palavra_antiga:
+        lista_palavras[i] = palavra_subs
+for i in lista_palavras:
+    print(i," ", end="")
