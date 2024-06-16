@@ -1,0 +1,18 @@
+lista_cadeia = []
+cadeia = input("Digite a cadeia de DNA: ")
+for caractere in cadeia:
+    lista_cadeia.append(caractere)
+cadeia_subs = []
+for i in lista_cadeia:
+    if i == 'A':
+        cadeia_subs.append('T')
+    if i == 'G':
+        cadeia_subs.append('C')
+    if i == 'T':
+        cadeia_subs.append('A')
+    if i == 'C':
+        cadeia_subs.append('G')
+
+print('A cadeia complementar é:')
+for i in cadeia_subs:
+    print(i, end="")
