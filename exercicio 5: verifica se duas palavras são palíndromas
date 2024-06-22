@@ -1,0 +1,14 @@
+n1 = input("Digite uma palavra: ")
+n2 = input("Digite outra palavra: ")
+palavra1 = []
+palavra2 = []
+
+for caractere in n1:
+    palavra1.append(caractere)
+for i in range(len(n2)-1, -1, -1):
+    palavra2.append(n2[i])
+if palavra1 == palavra2:
+    print("As palavras são palindromas!")
+else:
+    print("Nao sao palindromas!")
+
