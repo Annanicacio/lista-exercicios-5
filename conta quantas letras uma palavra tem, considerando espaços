@@ -1,0 +1,6 @@
+palavra = input('Digite uma palavra: ')
+quantidade = 0
+for caractere in palavra:
+    if caractere != " ":
+        quantidade += 1
+print('Essa palavra tem', quantidade, 'letras!')
