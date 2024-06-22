@@ -1,0 +1,10 @@
+frase = input('Escreva uma frase contendo espaços: ')
+frase2 = []
+for caractere in frase:
+    if caractere == " ":
+        frase2.append('#')
+    else:
+        frase2.append(caractere)
+
+for i in frase2:
+    print(i, end="")
