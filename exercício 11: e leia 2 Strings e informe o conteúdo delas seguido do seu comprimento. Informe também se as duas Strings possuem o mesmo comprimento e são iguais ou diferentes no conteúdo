@@ -1,0 +1,13 @@
+frase1 = input("Digite uma frase: ")
+frase2 = input("Digite outra frase: ")
+
+print(frase1, ": possui ", len(frase1), "caracteres")
+print(frase2, ": possui ", len(frase2), "caracteres")
+if len(frase1) != len(frase2):
+    print("As frases possuem tamanhos diferentes")
+else:
+    print("As frases possuem o mesmo tamanho")
+if frase1 == frase2:
+    print("As frases possuem o mesmo conteudo")
+else:
+    print("não possuem o mesmo conteudo")
