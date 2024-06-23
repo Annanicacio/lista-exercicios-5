@@ -1,0 +1,8 @@
+def conta_palavra(frase):
+    quantidade = 0
+    frase1 = frase.split(" ")
+    for palavra in frase1:
+        quantidade +=1
+    print("A quantidade de palavras é: ", quantidade)
+frase = input("Digite uma frase: ")
+conta_palavra(frase)
