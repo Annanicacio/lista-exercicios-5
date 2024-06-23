@@ -1,0 +1,22 @@
+frase = input("Digite uma frase: ")
+frase_lista = []
+for caractere in frase:
+    frase_lista.append(caractere)
+a = e = vogal_i = o = u = 0
+espaço = 0
+for i in range(len(frase_lista)):
+    if frase_lista[i] == " ":
+        espaço += 1
+    if frase_lista[i] == 'a':
+        a += 1
+    if frase_lista[i] == 'e':
+        e += 1
+    if frase_lista[i] == 'i':
+        vogal_i += 1
+    if frase_lista[i] == 'o':
+        o += 1
+    if frase_lista[i] == 'u':
+        u += 1
+print("A a frase possui ", espaço, "espaços",
+      "e a quantidade de vogais é: \n a: ", a, "e: ", e, "i: ", vogal_i, "o: ", o, "u: ", u)
+
