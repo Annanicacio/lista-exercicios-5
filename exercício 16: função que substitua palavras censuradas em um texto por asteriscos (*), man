@@ -1,0 +1,18 @@
+def censurar(texto1, censura1):
+    for i in range(len(texto1)):
+        for j in range(len(censura1)):
+            if texto1[i] == censura1[j]:
+                texto1[i] = len(texto1[i]) * '*'
+
+    return texto1
+
+texto = input("Digite um texto: ")
+censura = input("Quais palavras você quer censurar? ")
+texto1 = []
+censura1 = []
+texto1 = texto.split(" ")
+censura1 = censura.split(" ")
+
+novo_texto = censurar(texto1, censura1)
+for i in novo_texto:
+    print(i, " ", end="")
