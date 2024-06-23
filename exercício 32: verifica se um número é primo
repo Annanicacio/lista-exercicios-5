@@ -1,0 +1,16 @@
+def verifica_primo (p1):
+    contador = 2
+    resultado = 0
+    while contador < p1:
+        resultado = p1 % contador
+        if resultado == 0:
+            print("Esse numero não é primo!")
+            break
+        else:
+            contador += 1
+    if resultado != 0:
+        print("Esse numero é primo")
+
+p1 = int(input('Digite um valor para verificar se é primo: '))
+verifica_primo(p1)
+
