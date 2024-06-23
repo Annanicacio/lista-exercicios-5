@@ -1,0 +1,11 @@
+def inverte_frase(n1, frase_inv):
+    lista_n1 = n1.split(" ")
+
+    for i in range(len(lista_n1)-1, -1, -1):
+        frase_inv.append(lista_n1[i])
+    for i in frase_inv:
+        print(i, " ", end="")
+
+frase_inv = []
+n1 = input("Digite uma frase: ")
+inverte_frase(n1, frase_inv)
