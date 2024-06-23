@@ -1,0 +1,8 @@
+n1 = input("Digite seu nome: ")
+n2 = n1.upper()
+nome = []
+for caractere in n2:
+    nome.append(caractere)
+for i in range(len(nome)-1, -1, -1):
+    print(nome[i], end="")
+
