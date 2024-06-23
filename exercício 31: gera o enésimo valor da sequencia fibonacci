@@ -1,0 +1,19 @@
+def gera_n(n):
+    anterior = 1
+    atual = 1
+
+    if n == 1 or n == 2:
+        print("O número 1 está na", n, "° ordem da sequência Fibonacci")
+        return
+
+    contador = 3
+
+    while contador <= n:
+        proximo = anterior + atual
+        anterior = atual
+        atual = proximo
+        contador += 1
+    print("O número", atual, "está na", n, "° ordem da sequência Fibonacci")
+
+n = int(input('Digite o número desejado da sequência Fibonacci: '))
+gera_n(n)
