@@ -1,0 +1,9 @@
+n1 = input("Digite um número de telefone: ")
+telefone = list(n1)
+digito = [3]
+if "-" in telefone and len(n1) < 9 or "-" not in telefone and len(n1) < 8:
+    numero_novo = digito + telefone
+    print("O numero que você digitou tem 7 dígitos :/ \n"
+          "vou acrescer um 3: ")
+    for i in numero_novo:
+        print(i, end="")
