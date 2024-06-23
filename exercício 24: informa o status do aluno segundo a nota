@@ -1,0 +1,11 @@
+def inf_status(nota):
+
+    if nota > 6:
+        print("parabéns! você foi aprovado!")
+    elif nota <= 6 and nota >= 4:
+        print("Você está de exame")
+    else:
+        print("você está reprovado!")
+
+nota = int(input("Digite sua media: "))
+inf_status(nota)
