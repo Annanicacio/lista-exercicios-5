@@ -1,0 +1,25 @@
+def intercala_strings(p1, p2):
+
+    p1_lista = list(p1)
+    p2_lista = list(p2)
+
+    lista_intercalada = []
+    if p1_lista < p2_lista:
+        tamanho = len(p1_lista)
+    else:
+        tamanho = len(p2_lista)
+
+    for i in range(tamanho):
+        lista_intercalada.append(p1_lista[i])
+        lista_intercalada.append(p2_lista[i])
+
+    if len(p1_lista) > len(p2_lista):
+        lista_intercalada.extend(p1_lista[tamanho:])
+    else:
+        lista_intercalada.extend(p2_lista[tamanho:])
+    resultado = ''.join(lista_intercalada)
+    print(resultado)
+
+p1 = input("Digite uma palavra: ")
+p2 = input("Digite outra palavra:")
+intercala_strings(p1, p2)
