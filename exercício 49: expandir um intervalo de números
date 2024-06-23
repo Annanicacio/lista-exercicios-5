@@ -1,0 +1,12 @@
+n1 = input("Digite um intervalo separado por '-': ")
+n1_lista = n1.split("-")
+
+contador = int(n1_lista[0])
+fim = int(n1_lista[-1])
+lista_expand = []
+while contador <= fim:
+    lista_expand.append(contador)
+    contador +=1
+print("a lista expandida é: ", lista_expand)
+
+
