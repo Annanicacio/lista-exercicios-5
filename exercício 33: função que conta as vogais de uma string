@@ -1,0 +1,26 @@
+frase = input("Digite uma frase: ")
+lista_frase = []
+lista_0esp = []
+for caractere in frase:
+    lista_frase.append(caractere)
+for i in range(len(lista_frase)):
+    if lista_frase[i] == " ":
+        lista_frase[i] = lista_frase[i+1]
+    else:
+        lista_0esp.append(lista_frase[i])
+
+a = e = vogal_i = o = u = 0
+
+for i in range(len(lista_0esp)):
+    if lista_0esp[i] == 'a':
+        a += 1
+    if lista_0esp[i] == 'e':
+        e += 1
+    if lista_0esp[i] == 'i':
+        vogal_i += 1
+    if lista_0esp[i] == 'o':
+        o += 1
+    if lista_0esp[i] == 'u':
+        u += 1
+print("A quantidade de vogais é: \n a: ", a, "e: ", e, "i: ", vogal_i, "o: ", o, "u: ", u)
+
