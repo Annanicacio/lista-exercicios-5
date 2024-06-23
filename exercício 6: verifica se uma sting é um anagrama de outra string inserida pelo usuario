@@ -1,0 +1,20 @@
+n1 = input("Digite uma palavra: ")
+n2 = input("Digite seu anagrama: ")
+anagrama = []
+palavra1 = []
+palavra2 = []
+for caractere in n1:
+    palavra1.append(caractere)
+for caractere in n2:
+    palavra2.append(caractere)
+i = 0
+for i in range(len(palavra1)):
+    for j in range(len(palavra2)):
+        if palavra1[i]==palavra2[j]:
+            anagrama.append(palavra2[j])
+            break
+    i =+1
+if palavra1 == anagrama:
+    print("O anagrama que você digitou é realmente anagrama para a palavra digitada")
+else:
+    print("O anagrama que você digitou não está correto!")
