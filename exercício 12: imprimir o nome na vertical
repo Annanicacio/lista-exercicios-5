@@ -1,0 +1,6 @@
+nome = input("Digite seu nome: ")
+nome_lista = []
+for caractere in nome:
+    nome_lista.append(caractere)
+for i in nome_lista:
+    print(i)
