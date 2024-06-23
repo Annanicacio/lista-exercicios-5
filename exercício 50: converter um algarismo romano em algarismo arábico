@@ -1,0 +1,23 @@
+def calcula_algarismo(romano):
+    algarismos = {
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000
+    }
+    atual = 0
+    ante = 0
+    total = 0
+    for caractere in romano:
+        atual = algarismos[caractere]
+        if atual > ante:
+            total = atual - ante
+        else:
+            total = atual + ante
+        ante = total
+    print("O numero romano", romano, "corresponde a ", total, "em algarismos arabicos")
+romano = input("Digite um numero romano: ")
+calcula_algarismo(romano)
