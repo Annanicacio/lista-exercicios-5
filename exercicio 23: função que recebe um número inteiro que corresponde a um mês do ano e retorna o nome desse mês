@@ -1,0 +1,20 @@
+def mes_extenso1(mes):
+
+    mes_extenso = {
+        "01": "janeiro",
+        "02": "fevereiro",
+        "03": "março",
+        "04": "abril",
+        "05": "maio",
+        "06": "junho",
+        "07": "julho",
+        "08": "agosto",
+        "09": "setembro",
+        "10": "outubro",
+        "11": "novembro",
+        "12": "dezembro"}
+    print("O mês que corresponde a esse número é: ", mes_extenso[mes])
+    return mes_extenso
+
+mes = input("Digite o numero do mês: ")
+mes_extenso1(mes)
