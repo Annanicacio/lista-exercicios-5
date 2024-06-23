@@ -1,0 +1,6 @@
+lista = [1, 3, 6, 21, 80]
+soma = 0
+for i in range(len(lista)):
+    soma = soma + lista[i]
+media = soma / len(lista)
+print("A média dessa lista de números é: ", media)
