@@ -1,0 +1,14 @@
+import math
+def distancia_euclidiana(ponto1, ponto2):
+
+    if len(ponto1) != len(ponto2):
+        print("Os pontos devem ter o mesmo número de dimensões")
+    soma = 0
+    for i in range(len(ponto1)):
+        soma += (ponto1[i] - ponto2[i]) ** 2
+    return math.sqrt(soma)
+
+ponto1 = [4, 2]
+ponto2 = [7, 5]
+distancia = distancia_euclidiana(ponto1, ponto2)
+print("A distância euclidiana entre os pontos é:", distancia)
