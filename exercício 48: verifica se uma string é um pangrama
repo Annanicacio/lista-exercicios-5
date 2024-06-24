@@ -1,0 +1,16 @@
+def pangrama(frase):
+
+    alfabeto = set('abcdefghijklmnopqrstuvwxyz')
+    letras_encontradas = set()
+
+    for char in frase.lower():
+        if char in alfabeto:
+            letras_encontradas.add(char)
+
+    return letras_encontradas == alfabeto
+
+frase = "o rato roeu a roupa do rei de roma"
+if pangrama(frase):
+    print("A frase é um pangrama.")
+else:
+    print("A frase não é um pangrama.")
