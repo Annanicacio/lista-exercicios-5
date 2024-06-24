@@ -1,0 +1,17 @@
+def substitui_abrev():
+  dic = {"abs": "abraços",
+          "fds": "final de semana",
+          "amgs": "amigos"}
+
+  n1 = input("Digite um texto: ")
+  n2 = []
+  n2 = n1.split(" ")
+  n3 = []
+  for palavra in n2:
+    if palavra not in dic:
+        n3.append(palavra)
+    if palavra in dic:
+        palavra = dic[palavra]
+        n3.append(palavra)
+  print(n3)
+substitui_abrev()
