@@ -1,0 +1,18 @@
+def fatorial(n):
+    contador = 1
+    resultado = 1
+    while contador <= n:
+        resultado = contador * resultado
+        contador += 1
+    return resultado
+
+qtd = int(input("Quantos alunos a sala possui? "))
+n = int(input("Quantos alunos terá o primeiro grupo? "))
+m = qtd - n
+
+fator_n = fatorial(n)
+fator_m = fatorial(m)
+fator_qtd = fatorial(qtd)
+
+combina = fator_qtd / (fator_n * fator_m)
+print("Os grupos podem ser divididos de", combina, "combinações diferentes!")
