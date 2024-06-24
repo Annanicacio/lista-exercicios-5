@@ -1,0 +1,33 @@
+def calcular_a_e_p(tipo_figura):
+    if tipo_figura == 1:
+        raio = float(input("Digite o raio da circunferência: "))
+        area = math.pi * raio ** 2
+        perimetro = 2 * math.pi * raio
+        return area, perimetro
+    elif tipo_figura == 2:
+        lado1 = float(input("Digite o comprimento do lado 1 do triângulo: "))
+        lado2 = float(input("Digite o comprimento do lado 2 do triângulo: "))
+        lado3 = float(input("Digite o comprimento do lado 3 do triângulo: "))
+        perimetro = lado1 + lado2 + lado3
+        s = perimetro / 2
+        area = math.sqrt(s * (s - lado1) * (s - lado2) * (s - lado3))
+        return area, perimetro
+    elif tipo_figura == 3:
+        lado1 = float(input("Digite o comprimento do lado 1 do retângulo: "))
+        lado2 = float(input("Digite o comprimento do lado 2 do retângulo: "))
+        area = lado1 * lado2
+        perimetro = 2 * (lado1 + lado2)
+        return area, perimetro
+    else:
+        print("Tipo de figura inválido.")
+        return None, None
+
+print("Escolha o tipo de figura geométrica:")
+print("(1) Circunferência")
+print("(2) Triângulo")
+print("(3) Retângulo")
+
+tipo_figura = int(input("Digite o número correspondente ao tipo de figura: "))
+area, perimetro = calcular_a_e_p(tipo_figura)
+print(f"Área da figura: {area}")
+print(f"Perímetro da figura: {perimetro}")
