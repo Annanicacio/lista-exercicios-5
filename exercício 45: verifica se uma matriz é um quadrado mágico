@@ -1,0 +1,30 @@
+def verifica(matriz):
+    n = len(matriz)
+    soma_magica = sum(matriz[0])
+    for linha in matriz:
+        if sum(linha) != soma_magica:
+            return False
+
+    for col in range(n):
+        soma_coluna = sum(matriz[linha][col] for linha in range(n))
+        if soma_coluna != soma_magica:
+            return False
+
+    soma_diag = sum(matriz[i][i] for i in range(n))
+    if soma_diag != soma_magica:
+        return False
+
+    soma_diag2 = sum(matriz[i][n-i-1] for i in range(n))
+    if soma_diag2!= soma_magica:
+        return False
+    return True
+
+matriz = [
+    [2, 7, 6],
+    [9, 5, 1],
+    [4, 3, 8]
+]
+if verifica(matriz):
+    print("A matriz é um quadrado mágico.")
+else:
+    print("A matriz não é um quadrado mágico.")
