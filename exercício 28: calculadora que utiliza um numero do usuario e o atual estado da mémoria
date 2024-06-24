@@ -1,0 +1,50 @@
+def somar(memoria, valor):
+    return memoria + valor
+
+def subtrair(memoria, valor):
+    return memoria - valor
+
+def multiplicar(memoria, valor):
+    return memoria * valor
+
+def dividir(memoria, valor):
+    if valor == 0:
+        print("Erro: Divisão por zero não é permitida.")
+        return memoria
+    return memoria / valor
+
+def limpar_memoria():
+    return 0
+
+memoria = 0
+while True:
+    print(f"\nEstado da memória: {memoria}")
+    print("Opções:")
+    print("(1) Somar")
+    print("(2) Subtrair")
+    print("(3) Multiplicar")
+    print("(4) Dividir")
+    print("(5) Limpar memória")
+    print("(6) Sair do programa")
+    opcao = input("Qual opção você deseja? ")
+
+    if opcao == '1':
+        valor = float(input("Digite o número para somar: "))
+        memoria = somar(memoria, valor)
+    elif opcao == '2':
+        valor = float(input("Digite o número para subtrair: "))
+        memoria = subtrair(memoria, valor)
+    elif opcao == '3':
+        valor = float(input("Digite o número para multiplicar: "))
+        memoria = multiplicar(memoria, valor)
+    elif opcao == '4':
+        valor = float(input("Digite o número para dividir: "))
+        memoria = dividir(memoria, valor)
+    elif opcao == '5':
+        memoria = limpar_memoria()
+    elif opcao == '6':
+        print("Saindo do programa.")
+        break
+    else:
+        print("Opção inválida. Por favor, escolha uma opção válida.")
+
