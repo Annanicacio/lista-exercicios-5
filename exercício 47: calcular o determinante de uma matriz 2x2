@@ -1,0 +1,9 @@
+def calc_deter(matriz):
+
+    mult1 = matriz[0][0] * matriz[1][1]
+    mult2 = matriz[0][1] * matriz[1][0]
+    determinante = mult1 - mult2
+    print("O determinante dessa matriz é: ", determinante)
+
+matriz = [[12, 2], [3, 4]]
+calc_deter(matriz)
