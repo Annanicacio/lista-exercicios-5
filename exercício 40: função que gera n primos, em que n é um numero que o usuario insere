@@ -1,0 +1,23 @@
+def primos_lista(p1,p2):
+    contador = 2
+    resultado = 0
+    primos = []
+
+    while p1 <= p2:
+        if p1 == 2:
+            primos.append(p1)
+        while contador < p1:
+            resultado = p1 % contador
+            if resultado == 0:
+                break
+            else:
+                contador += 1
+        if resultado != 0:
+            primos.append(p1)
+        p1 += 1
+        contador = 2
+    print("Os primos nesse intervalo são: ", primos)
+
+p1 = int(input('Digite o primeiro valor do intervalo de primos: '))
+p2 = int(input('Digite o segundo valor do intervalo de primos: '))
+primos_lista(p1,p2)
