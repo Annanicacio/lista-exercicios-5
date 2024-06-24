@@ -1,0 +1,10 @@
+def ordena(lista):
+    for i in range(len(lista)):
+        for j in range(len(lista)):
+            if lista[i]< lista[j]:
+                temp = lista[i]
+                lista[i] = lista[j]
+                lista[j] = temp
+    print(lista)
+lista = [1,5,6,7,3,2,5]
+ordena(lista)
