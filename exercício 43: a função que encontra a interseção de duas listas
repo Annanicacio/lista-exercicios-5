@@ -1,0 +1,9 @@
+def intersecção():
+  lista1 = [0, 1, 2, 4, 6, 7]
+  lista2 = [0, 2, 4, 7, 9, 9, 6]
+  soma = []
+  for i in lista1:
+      if i not in soma and i in lista2:
+          soma.append(i)
+  print("A intersecção entre essas listas é: ", soma)
+intersecção()
