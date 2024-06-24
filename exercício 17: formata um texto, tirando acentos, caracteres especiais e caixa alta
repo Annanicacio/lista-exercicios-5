@@ -1,0 +1,11 @@
+def normaliza_txt(texto):
+
+    texto_arrumado = texto.lower().replace(".", "").replace(",", "").replace("!", "").replace("?", "").replace("ã", "a").replace("ê", "e").replace("é", "e").replace("á", "a").replace("í", "i").replace("ú", "u")
+    palavras = []
+    palavras = texto_arrumado.split(" ")
+    print(palavras)
+
+texto = input("Digite um texto: ")
+normaliza_txt(texto)
+
+
