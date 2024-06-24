@@ -1,0 +1,16 @@
+def verifica(s):
+    lista = []
+    corresponde = {')': '(',
+                       ']': '[',
+                       '}': '{'}
+    for char in s:
+        if char in '({[':
+            lista.append(char)
+        elif char in ')}]':
+            if not lista or lista[-1] != corresponde[char]:
+                return False
+
+            lista.pop()
+    return not lista
+s1 = "{[()()]}"
+print(verifica(s1))
