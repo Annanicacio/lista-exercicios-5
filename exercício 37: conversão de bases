@@ -1,0 +1,31 @@
+def base_para_decimal(numero, base_origem):
+    return int(numero, base_origem)
+def decimal_para_base(numero, base_destino):
+
+    if numero == 0:
+        return "0"
+    digitos = []
+    while numero:
+        digitos.append(int(numero % base_destino))
+        numero //= base_destino
+
+    digitos = digitos[::-1]
+    return ''.join(str(digito) for digito in digitos)
+def converter_base(numero, base_origem, base_destino):
+
+    decimal = base_para_decimal(numero, base_origem)
+    return decimal_para_base(decimal, base_destino)
+
+numero_binario = "1011"
+base_origem = 2
+base_destino = 10
+
+resultado = converter_base(numero_binario, base_origem, base_destino)
+print(f"{numero_binario} na base {base_origem} é {resultado} na base {base_destino}")
+
+numero_decimal = "11"
+base_origem = 10
+base_destino = 2
+
+resultado = converter_base(numero_decimal, base_origem, base_destino)
+print(f"{numero_decimal} na base {base_origem} é {resultado} na base {base_destino}")
