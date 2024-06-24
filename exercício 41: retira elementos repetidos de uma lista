@@ -1,0 +1,8 @@
+def sem_repet():
+    lista1 = [0, 0, 1, 2, 4, 4, 6]
+    lista2 = []
+    for i in lista1:
+        if i not in lista2:
+            lista2.append(i)
+    print("A lista sem repetições é: ", lista2)
+sem_repet()
